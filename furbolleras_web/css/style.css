@@ -1,0 +1,555 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* Font */
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+/* ROOT */
+:root {
+    --color-gris: #3a3e41;
+    --color-white: #f0ebe5;
+    --color-black: black;
+    --color-bluesky: #6FFFE9;
+    --color-darkblue: #0B132B;
+    --regular-font-size: 5rem;
+}
+
+/* BODY */
+body {
+    margin: 0;
+    background-color: var(--color-white);
+}
+
+/* STANDARD ELEMENTS AND STYLES*/
+
+/* Img */
+.img-standard {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.img-opacity {
+    opacity: .9;
+}
+
+/* Text */
+.text-right {
+    text-align: right;
+}
+.text-center {
+    text-align: center;
+}
+
+/* Fixed Element */
+.fixed-element{
+    background-color: var(--color-white);
+    position: fixed;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1rem;
+    top: 50vh;
+    right: 2rem;
+    z-index: 2;
+}
+.fixed-element:hover{
+    cursor: pointer;
+}
+
+
+
+/* Background */
+.Background-bluesky {
+    background-color: var(--color-bluesky);
+}
+
+.Background-darkblue {
+    background-color: var(--color-darkblue);
+}
+
+.Background-white {
+    background-color: var(--color-white);
+}
+
+/* VERSIÓN PARA ESCRITORIO */
+
+/* HEADER */
+.Header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.Header-picture {
+    width: 10%;
+}
+/* Botón Hamburguesa */
+.Header-btn{
+    background: transparent;
+    border: none;
+    display: none;
+    color: var(--color-black);
+}
+.Header-btn:hover{
+    cursor: pointer;
+}
+
+/* Menu */
+.Header-menu {
+    flex-basis: 70%;
+}
+
+.Menu-ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Menu-a {
+    color: var(--color-gris);
+    text-decoration: none;
+}
+
+.Menu-efecto {
+    display: block;
+    height: .2rem;
+    background-color: var(--color-black);
+    width: 0%;
+    opacity: .5;
+
+    transition: width 0.5s ease;
+}
+.Menu-a:hover .Menu-efecto{
+    width: 100%;
+}
+
+.Menu-a:hover {
+    color: var(--color-black);
+    cursor: pointer;
+}
+
+/* MAIN */
+/* First Section: QUIENES SOMOS */
+.main {
+    padding: 2rem;
+}
+
+.Section-qsomos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "h1 img"
+        "article img";
+}
+.Section-h1 {
+    grid-area: h1;
+    display: flex;
+    flex-direction: column;
+    font-size: var(--regular-font-size);
+}
+
+.Section-h2 {
+    color: var(--color-black);
+    font-size: var(--regular-font-size);
+    grid-area: h2;
+    border-bottom: dashed 1px var(--color-black);
+}
+
+.Section-art {
+    grid-area: article;
+    color: var(--color-gris);
+    margin-right: 5rem;
+}
+
+.Section-picture {
+    grid-area: img;
+    align-self: center;
+}
+
+.Section-a {
+    text-decoration: none;
+    color: var(--color-black);
+
+}
+
+.Section-a:hover {
+    color: var(--color-gris);
+}
+
+/* Second Section: PARTIDOS */
+.Section-liga,
+.Liga-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.Liga-contenedor {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.Liga-div {
+    justify-content: center;
+    align-items: center;
+}
+
+.partido-1,
+.partido-2,
+.partido-3,
+.partido-4,
+.partido-5,
+.partido-6 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 5rem;
+    width: 11rem;
+}
+
+.Section-h4 {
+    font-size: 2em;
+    margin: 0;
+}
+
+/* Lista de partidos */
+.partido-1 {
+    background-image: url(../img/partido_1.png);
+}
+
+.partido-2 {
+    background-image: url(../img/partido_2.png);
+}
+
+.partido-3 {
+    background-image: url(../img/partido_3.png);
+}
+
+.partido-4 {
+    background-image: url(../img/partido_4.png);
+}
+
+.partido-5 {
+    background-image: url(../img/partido_5.png);
+}
+
+.partido-6 {
+    background-image: url(../img/partido_6.png);
+}
+
+
+/* Third Section: EQUIPO */
+.Section-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    grid-auto-rows: minmax(12rem, auto);
+    grid-auto-flow: dense;
+    gap: 1.25rem;
+}
+
+.Section-item {
+    background-color: var(--color-gris);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 0.25rem;
+
+    /* div */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transition: transform 0.3s ease-in-out;
+}
+
+.nombre_apellido {
+    justify-content: flex-end;
+}
+
+.Section-item:hover {
+    transform: scale(1.04);
+    filter: opacity(0.9);
+}
+
+/* TEAM IMAGES */
+.team-1 {
+    background-image: url(../img/equipo/isa.jpg);
+}
+
+.team-2 {
+    background-image: url(../img/equipo/eli.jpg);
+}
+
+.team-3 {
+    background-image: url(../img/equipo/bea.jpg);
+}
+
+.team-4 {
+    background-image: url(../img/equipo/lucia.jpg);
+}
+
+.team-5 {
+    background-image: url(../img/equipo/angela.jpg);
+}
+
+.team-6 {
+    background-image: url(../img/equipo/deby.jpg);
+}
+
+.team-7 {
+    background-image: url(../img/equipo/laura.jpg);
+}
+
+.team-8 {
+    background-image: url(../img/equipo/natalia.jpg);
+}
+
+.team-9 {
+    background-image: url(../img/equipo/noelia.jpg);
+}
+
+.team-10 {
+    background-image: url(../img/equipo/raque.jpg);
+}
+
+.team-11 {
+    background-image: url(../img/equipo/nieves.jpg);
+}
+
+.team-12 {
+    
+    background-image: url(../img/equipo/no-photo.png);
+}
+
+.team-13 {
+    background-image: url(../img/equipo/no-photo.png);
+}
+
+.team-14 {
+    background-image: url(../img/equipo/no-photo.png);
+}
+
+.team-15 {
+    background-image: url(../img/equipo/no-photo.png);
+}
+
+.team-16 {
+    background-image: url(../img/equipo/no-photo.png);
+}
+
+.Art-fig {
+    background-color: var(--color-gris);
+    color: var(--color-bluesky);
+    text-align: center;
+    border-radius: 0.25rem;
+}
+
+
+/* Four Section: FAQ */
+.Acordeon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.details {
+    width: 50%;
+    background-color: var(--color-gris);
+    padding: .5rem;
+    border-radius: .3rem;
+    margin: .5rem;
+    cursor: pointer;
+    color: var(--color-bluesky);
+}
+
+.summary {
+    list-style: none;
+}
+
+.summary::before {
+    content: '\271A';
+    padding-right: 1rem;
+}
+
+/* Fifth Section: CONTACTO */
+.Section-contacto {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(2, auto);
+}
+
+.Contacto-h2 {
+    grid-area:1 / 1 / 2 / 5;
+}
+
+.Section-form {
+    grid-area: 2 / 2 / 3 / 4;
+    ;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-column-gap: .5rem;
+}
+
+.Form-element {
+    background-color: var(--color-gris);
+    color: var(--color-white);
+    border: none;
+    border-radius: .5rem;
+    margin-bottom: .5rem;
+    padding: .5rem;
+    font-family: "Oswald", sans-serif;
+}
+/* Elementos formulario */
+.name{ grid-area: 1 / 1 / 2 / 3;}
+.email{grid-area:  1 / 3 / 2 / 5;}
+.textarea{ grid-area:  2 / 1 / 3 / 5;}
+.submit{ 
+    grid-area:  3 / 4 / 4 / 5;
+    cursor: pointer;
+}
+
+/* FOOTER */
+.Footer{
+    background-color: var(--color-gris);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Footer-picture {
+    width: 10%;
+}
+.Footer-menu {
+    flex-basis: 70%;
+}
+.Footer-menu--ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+.Footer-menu--efecto {
+    display: block;
+    height: .2rem;
+    background-color: var(--color-white);
+    width: 0%;
+    opacity: .5;
+
+    transition: width 0.5s ease;
+}
+.Footer-menu--a:hover .Footer-menu--efecto{
+    width: 100%;
+}
+
+.Footer-menu--a {
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+/* VERSIÓN PARA PEQUEÑOS DISPOSITIVOS : TABLET Y MÓVIL */
+@media (max-width: 768px){
+
+    .fixed-element{
+        width: 2rem;
+        height: 2rem;
+        right: 0.1rem;
+    }
+
+    /* Header */
+    .Header-picture{
+        width: 20%;
+        padding-left: 1rem;
+    }
+    .Header-btn {
+        display: block;
+        padding-right: 1rem;
+    }
+    .Header-menu {
+        flex-basis: 100%;
+        display: none;
+    }
+    .Header-menu.isActive {
+        display: block;
+    }
+    .Menu-ul {
+        flex-direction: column;
+        padding-right: 1rem;
+    }
+    .Menu-li {text-align: right;}
+    .Menu-efecto {
+        display: none;
+    }
+
+    /* Sección Quienes somos */
+    .Section-qsomos {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr;
+        grid-template-areas:
+            "h1"
+            "img"
+            "article";
+    }
+    .Section-h1, .Section-h2 {
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        gap: .5rem;
+        font-size: 2em;
+        border: none;
+    }
+    .Section-art{margin: 0;}
+
+    /* Sección FAQ */
+    .details {
+        width: 80%;
+    }
+
+    /* Sección contacto */
+    
+    .Section-form {
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(4, auto);
+    }
+
+    /* Elementos formulario */
+    .name{ grid-area: 1 / 1 / 2 / 2;}
+    .email{grid-area:  2 / 1 / 3 / 2;}
+    .textarea{ grid-area:  3 / 1 / 4 / 2;}
+    .submit{ grid-area:   4 / 1 / 5 / 2;}
+
+    /* Sección Footer */
+    .Footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .Footer-picture {
+        width: 30%;
+    }
+    .Footer-menu--ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    .Footer-menu--efecto{
+        display: none;
+    }
+}
+@media (max-width: 260px){
+    .Section-h1, .Section-h2{
+        font-size: 1em;
+    }
+}
