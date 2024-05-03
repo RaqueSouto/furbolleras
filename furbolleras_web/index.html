@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FRB FC</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- JS -->
     <script src="js/script.js" defer></script>
-
+    <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
@@ -17,6 +19,7 @@
 
 <body class="body">
     <header class="Header">
+        <!-- Logo del equipo -->
         <picture class="Header-picture">
             <img src="img/logo_png.png" title="logo de furbolleras" alt="logo furbolleras" loading="lazy"
                 class="img-standard">
@@ -24,6 +27,7 @@
         <!-- Menú hamburguesa que se activa en dispositivos más pequeños -->
         <button class="Header-btn">&#9776;</button>
         <nav class="Header-menu">
+            <!-- Menú con enlaces a las distintas partes de la web -->
             <ul class="Menu-ul">
                 <li class="Menu-li"><a href="#quienes_somos" class="Menu-a ">QUIENES SOMOS <span class="Menu-efecto"></span></a></li>
                 <li class="Menu-li"><a href="#partidos" class="Menu-a ">PARTIDOS <span class="Menu-efecto"></span></a></li>
@@ -40,7 +44,7 @@
             <div class="fixed-element">
                 <a href="https://www.instagram.com/furbolleras.sevilla/" target="_blank"><img src="img/logotipo-de-instagram.png" alt="logo instagram" title="logo instagram" loading="lazy" class="img-standard"></a>
             </div>
-            <!-- Logo del equipo -->
+            <!-- Imagen principal del equipo -->
             <picture class="Section-picture"><img src="img/liga_equipo_azul.jpeg"
                     title="furbolleras primer partido liga" alt="furbolleras equipo" loading="lazy"
                     class="img-standard img-opacity"></picture>
@@ -56,43 +60,50 @@
             </article>
         </section>
 
-        <!-- Partidos del equipo -->
+        <!-- Sección de los partidos -->
 
         <section id="partidos" class="Section-liga">
 
             <h2 class="Section-h2">PARTIDOS</h2>
+            <!-- Partidos relacionados con la liga de primavera -->
             <h3 class="text-center">Liga de primavera IMD 2024</h3>
             <div class="Liga-contenedor">
                 <div class="Liga-div">
                     <div class="partido-1"></div>
+                    <!-- Partido finalizado -->
                     <h4 class="Section-h4">2-3</h4>
                 </div>
                 <div class="Liga-div">
                     <div class="partido-2"></div>
+                    <!-- Partido finalizado -->
                     <h4 class="Section-h4">12-0</h4>
                 </div>
                 <div class="Liga-div">
                     <div class="partido-3"></div>
+                    <!-- Resultado pendiente de disputar el partido -->
                     <h4 class="Section-h4">04/05</h4>
 
                 </div>
                 <div class="Liga-div">
                     <div class="partido-4"></div>
+                    <!-- Resultado pendiente de disputar el partido -->
                     <h4 class="Section-h4">10/05</h4>
                 </div>
                 <div class="Liga-div">
                     <div class="partido-5"></div>
+                    <!-- Resultado pendiente de disputar el partido -->
                     <h4 class="Section-h4">18/05</h4>
                 </div>
                 <div class="Liga-div">
                     <div class="partido-6"></div>
+                    <!-- Resultado pendiente de disputar el partido -->
                     <h4 class="Section-h4">25/05</h4>
                 </div>
             </div>
 
 
         </section>
-        <!-- Sección del equipo -->
+        <!-- Sección del equipo : Galería de imágenes de las integrantes -->
         <section id="equipo" class="Section-equipo">
             <h2 class="Section-h2 text-right">EQUIPO</h2>
             <div class="Section-container">
@@ -178,7 +189,7 @@
                 </div>
             </div>
         </section>
-        <!-- Sección FAQ -->
+        <!-- Sección FAQ : Preguntas y respuestas -->
         <section id="faq" class="Section-faq">
             <h2 class="Section-h2">PREGUNTAS FRECUENTES</h2>
             <div class="Acordeon">
@@ -231,9 +242,10 @@
                 </details>
             </div>
         </section>
-        <!-- Sección de contacto -->
+        <!-- Sección de contacto : Formulario  -->
         <section id="contacto" class="Section-contacto">
             <h2 class="Section-h2 text-right Contacto-h2">CONTACTO</h2>
+            <!-- Se ha añadido el elemento "netlify" para que los formularios puedan ser gestionados desde allí -->
             <form method="POST" class="Section-form" netlify>
                 <input type="text" name="nombre" id="nombre" required placeholder="Nombre*" class="Form-element name">
                 <input type="email" name="email" id="email" required placeholder="Email*" class="Form-element email">
@@ -244,10 +256,12 @@
     </main>
     <!-- FOOTER -->
     <footer class="Footer">
+        <!-- Logo del equipo -->
         <picture class="Footer-picture">
             <img src="img/logo_png.png" title="logo de furbolleras" alt="logo furbolleras" loading="lazy" class="img-standard">
         </picture>
         <nav class="Footer-menu">
+            <!-- Menú con enlaces a las distintas partes de la web -->
             <ul class="Footer-menu--ul">
                 <li class="menu-li"><a href="#quienes_somos" class="Footer-menu--a ">QUIENES SOMOS <span class="Footer-menu--efecto"></span></a></li>
                 <li class="menu-li"><a href="#partidos" class="Footer-menu--a ">PARTIDOS <span class="Footer-menu--efecto"></span></a></li>
