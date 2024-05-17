@@ -7,6 +7,7 @@ html {
     font-family: "Oswald", sans-serif;
     font-weight: 500;
     font-style: normal;
+
 }
 /* Reseteo */
 *,
@@ -56,11 +57,11 @@ body {
 .fixed-element{
     background-color: var(--color-white);
     position: fixed;
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
     border-radius: 1rem;
-    top: 50vh;
-    right: 2rem;
+    top: 76vh;
+    right: 0;
     z-index: 2;
 }
 .fixed-element:hover{
@@ -143,7 +144,7 @@ body {
 
 /* MAIN */
 .main {
-    padding: 2rem;
+    padding: 3rem;
 }
 
 /* PRIMERA SECCIÓN : QUIÉNES SOMOS */
@@ -263,6 +264,12 @@ body {
     grid-auto-flow: dense;
     gap: 1.25rem;
 }
+/* Botón para cambiar de jugadorx */
+.Section-btn{
+    background: none;
+    border: none;
+    display: none;
+}
 
 .Section-item {
     background-color: var(--color-gris);
@@ -355,10 +362,11 @@ body {
 }
 
 .Art-fig {
-    background-color: var(--color-gris);
-    color: var(--color-bluesky);
+    background-color: var(--color-black);
+    color: var(--color-white);
     text-align: center;
     border-radius: 0.25rem;
+    margin: 0;
 }
 
 
@@ -366,18 +374,18 @@ body {
 .Acordeon {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 
 }
 
 .details {
-    width: 50%;
-    background-color: var(--color-gris);
+    width: 100%;
+    background-color: var(--color-white);
     padding: .5rem;
-    border-radius: .3rem;
+    border-bottom: 1px solid var(--color-black);
     margin: .5rem;
     cursor: pointer;
-    color: var(--color-bluesky);
+    color: var(--color-black);
 }
 
 .summary {
@@ -430,6 +438,7 @@ body {
 /* FOOTER */
 .Footer{
     background-color: var(--color-gris);
+    margin-right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -518,6 +527,27 @@ body {
     }
     .Section-art{margin: 0;}
 
+    /* Sección Equipo */
+    .Section-container {
+        grid-template-columns: 10% 80% 10%;
+        gap: 0;
+    }
+    .Section-btn {
+        display: block;
+    }
+    .Section-item {
+        position: absolute;
+    }
+    .Section-item p{
+        display: none;
+    }
+    .Section-item.isActive {
+        position: relative;
+    }
+    .Section-item.isActive p {
+        display: block;
+    }
+    
     /* Sección FAQ */
     .details {
         width: 80%;
