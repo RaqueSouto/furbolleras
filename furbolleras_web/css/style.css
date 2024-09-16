@@ -415,6 +415,10 @@ body {
     list-style: none;
 }
 
+.summary::-webkit-details-marker {
+    display: none;
+}
+
 .summary::before {
     content: '\271A';
     padding-right: 1rem;
