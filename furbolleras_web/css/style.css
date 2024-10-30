@@ -52,6 +52,9 @@ body {
 .text-center {
     text-align: center;
 }
+.color-azul {
+    font-size: .6em;
+}
 
 /* Fixed Element : elemento que se mantiene con el logo de instagram */
 .fixed-element{
@@ -220,11 +223,13 @@ body {
 .Liga-div {
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 
 .Liga-contenedor {
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 2rem;
@@ -235,7 +240,7 @@ body {
     align-items: center;
 }
 
-.partido-1,
+/* .partido-1,
 .partido-2,
 .partido-3,
 .partido-4,
@@ -244,9 +249,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 5rem;
-    width: 11rem;
-}
+} */
 
 .Section-h4 {
     font-size: 2em;
@@ -254,7 +257,7 @@ body {
 }
 
 /* Lista de partidos */
-.partido-1 {
+/* .partido-1 {
     background-image: url(../img/partido_1.png);
 }
 
@@ -276,7 +279,7 @@ body {
 
 .partido-6 {
     background-image: url(../img/partido_6.png);
-}
+} */
 
 
 /* TERCERA SECCIÓN: EQUIPO */
